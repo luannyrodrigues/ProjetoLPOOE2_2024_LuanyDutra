@@ -49,6 +49,7 @@ public class TestePersistencia {
 
         Pesquisador pesquisador = new Pesquisador("Dr. Carlos Mendes", "Ornitologia");
         Observacao observacao = new Observacao(LocalDate.of(2024, 10, 14), "Observação do tucano", pesquisador);
+        Observacao observacao2 = new Observacao((LocalDate.of(2024, 9, 21)), "detalhes", pesquisador);
         try {
             jpa.persist(habitat1);
             jpa.persist(habitat2);
@@ -57,6 +58,7 @@ public class TestePersistencia {
             jpa.persist(capivara);
             jpa.persist(pesquisador);
             jpa.persist(observacao);
+            jpa.persist(observacao2);
 
             System.out.println("Dados persistidos com sucesso.");
         } catch (Exception e) {

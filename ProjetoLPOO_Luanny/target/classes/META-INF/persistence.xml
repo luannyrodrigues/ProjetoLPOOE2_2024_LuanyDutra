@@ -5,6 +5,7 @@
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/ProjetoLPOOE1_Luanny"/>
       <property name="javax.persistence.jdbc.user" value="postgres"/>
+      <property name="hibernate.hbm2ddl.auto" value="create"/>
       <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
       <property name="javax.persistence.jdbc.password" value="vasco1234"/>
       <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>

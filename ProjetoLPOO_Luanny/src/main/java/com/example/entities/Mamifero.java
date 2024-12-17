@@ -50,7 +50,9 @@ public class Mamifero extends Animal {
         return dieta;
     }
 
-    public void setDietaAlimentar(String dieta) {
+    public void setDieta(String dieta) {
         this.dieta = dieta;
     }
+    
+    
 }

@@ -1,13 +1,17 @@
 package com.example.dao;
 
+import com.example.entities.Ave;
+import com.example.entities.Mamifero;
+import com.example.entities.Reptil;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import java.util.List;
 
 public class PersistenciaJPA implements InterfaceBD {
 
-    EntityManager entity;
-    EntityManagerFactory factory;
+    private EntityManager entity;
+    private EntityManagerFactory factory;
 
     public PersistenciaJPA() {
         factory = Persistence.createEntityManagerFactory("ProjetoLPOOE1_PU");
@@ -16,7 +20,6 @@ public class PersistenciaJPA implements InterfaceBD {
 
     @Override
     public Boolean conexaoAberta() {
-
         return entity.isOpen();
     }
 
@@ -26,8 +29,8 @@ public class PersistenciaJPA implements InterfaceBD {
     }
 
     @Override
-    public Object find(@SuppressWarnings("rawtypes") Class c, Object id) throws Exception {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public Object find(Class c, Object id) throws Exception {
+        return getEntityManager().find(c, id);
     }
 
     @Override
@@ -41,6 +44,7 @@ public class PersistenciaJPA implements InterfaceBD {
             if (entity.getTransaction().isActive()) {
                 entity.getTransaction().rollback();
             }
+            throw e;
         }
     }
 
@@ -55,6 +59,7 @@ public class PersistenciaJPA implements InterfaceBD {
             if (entity.getTransaction().isActive()) {
                 entity.getTransaction().rollback();
             }
+            throw e;
         }
     }
 

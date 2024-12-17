@@ -69,4 +69,8 @@ public class Pesquisador {
         this.observacoes.add(observacao);
         observacao.setPesquisador(this); // Estabelece a relação bidirecional
     }
+    @Override
+    public String toString() {
+    return this.nome; // Retorne apenas o nome do pesquisador
+}
 }

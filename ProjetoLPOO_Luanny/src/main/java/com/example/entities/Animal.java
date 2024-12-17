@@ -27,7 +27,7 @@ public abstract class Animal {
     @Column(nullable = false, length = 200)
     private String status;
 
-    @ManyToOne
+    @ManyToOne // chave estrangeira
     private Habitat habitat;
 
     public Animal(String nome, String nomeCientifico, String status) {
@@ -43,4 +43,42 @@ public abstract class Animal {
     public void setHabitat(Habitat h) {
         this.habitat = h;
     }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getNomeCientifico() {
+        return nomeCientifico;
+    }
+
+    public void setNomeCientifico(String nomeCientifico) {
+        this.nomeCientifico = nomeCientifico;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public Habitat getHabitat() {
+        return habitat;
+    }
+    
+    
 }

@@ -23,7 +23,7 @@ O sistema implementa funcionalidades **CRUD** (Create, Read, Update, Delete) com
 O desenvolvimento deste sistema faz parte da disciplina **Linguagem de Programação Orientada a Objetos** do curso de **Bacharelado em Ciência da Computação**. O principal objetivo é aplicar conceitos fundamentais de **programação orientada a objetos**, **persistência de dados** e **desenvolvimento de interfaces gráficas**, proporcionando uma aplicação funcional e integrada com um banco de dados.
 
 ## Diagrama de Classes
-![diagrama](Diagrama_de_classes.png)
+![diagrama](Diagrama_de_classes(1).png)
 
 ## Tecnologias Utilizadas
 
